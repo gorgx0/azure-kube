@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 def vmDataJson = "az vm list -d -o json".execute()
 new groovy.json.JsonSlurper().parseText(vmDataJson.text).each { it -> 
 	println """
