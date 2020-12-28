@@ -1,9 +1,0 @@
-remoteSession {
-//	exec 'sudo apt update'	
-	exec 'mkdir -p ~/.ssh'
-	exec 'rm -f /home/gorg/.ssh/id_rsa'
-	exec 'rm -f /home/gorg/.ssh/id_rsa.pub'
-	remoteFile('/home/gorg/.ssh/id_rsa').text = new File('azure_key').text
-	remoteFile('/home/gorg/.ssh/id_rsa.pub').text = new File('azure_key.pub').text
-	exec 'chmod 400 ~/.ssh/id_rsa'
-}
