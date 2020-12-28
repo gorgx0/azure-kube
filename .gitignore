@@ -2,3 +2,4 @@
 !*.secret
 ssh_config
 azure_key
+hosts
